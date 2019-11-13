@@ -22,6 +22,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // 案例1.方法交换
+    [self exchangeMethod];
+
+    
+    
+    ClassOne *classOne = [[ClassOne alloc] init];
+    classOne.age = @"10";
+    NSLog(@"age:%@", classOne.age);
+    
+}
+
+- (void)exchangeMethod{
     // 获取类方法
     Method method1 = class_getClassMethod([ClassOne class], @selector(classOneMethod));
     Method method2 = class_getClassMethod([ClassTwo class], @selector(classTwoMethod));
@@ -31,12 +43,6 @@
     
     [ClassOne classOneMethod];
     [ClassTwo classTwoMethod];
-    
-    
-    ClassOne *classOne = [[ClassOne alloc] init];
-    classOne.age = @"10";
-    NSLog(@"age:%@", classOne.age);
-    
 }
 
 

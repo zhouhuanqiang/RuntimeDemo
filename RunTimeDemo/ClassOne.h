@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ClassOne : NSObject
 
+@property (nonatomic, copy) NSString *one;
+@property (nonatomic, copy) NSString *two;
+@property (nonatomic, copy) NSString *three;
+
+
 + (void)classOneMethod;
 
 @end
